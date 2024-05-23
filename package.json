@@ -14,12 +14,11 @@
   },
   "homepage": "https://enatedev.github.io/test-cicd",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy:production": "npm run build",
+    "deploy:production": "gh-pages -d build -b production",
+
+    "predeploy:staging": "npm run build",
+    "deploy:staging": "gh-pages -d build -b staging"
   },
   "eslintConfig": {
     "extends": [

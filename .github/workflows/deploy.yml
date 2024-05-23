@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main  # or the branch you want to deploy
-
+      - develop	
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -23,9 +23,19 @@ jobs:
 
       - name: Build the project
         run: npm run build
-
+      - name: Configure Git user
+        run: |
+          git config --global user.email "nate@darasa.io"
+          git config --global user.name "E Nate"
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            npm run predeploy:production
+            npm run deploy:production
+          elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
+            npm run predeploy:staging
+            npm run deploy:staging
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
