@@ -3,8 +3,9 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main  # or the branch you want to deploy
-      - develop	
+      - main
+      - develop
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -16,26 +17,33 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '21'  # or the version you are using
+          node-version: '14'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build the project
         run: npm run build
+
       - name: Configure Git user
         run: |
-          git config --global user.email "nate@darasa.io"
-          git config --global user.name "E Nate"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+      - name: Extract repository owner
+        id: extract_owner
+        run: echo "::set-output name=owner::$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)"
+
       - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          REPO_OWNER: ${{ steps.extract_owner.outputs.owner }}
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
             npm run predeploy:production
-            npm run deploy:production
+            gh-pages -d build -b production -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
           elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
             npm run predeploy:staging
-            npm run deploy:staging
+            gh-pages -d build -b staging -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
           fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-

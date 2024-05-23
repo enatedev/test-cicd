@@ -20,7 +20,6 @@
     "eject": "react-scripts eject",
     "predeploy:production": "npm run build",
     "deploy:production": "gh-pages -d build -b production",
-
     "predeploy:staging": "npm run build",
     "deploy:staging": "gh-pages -d build -b staging"
   },
