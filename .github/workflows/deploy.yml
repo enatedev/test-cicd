@@ -40,6 +40,12 @@ jobs:
         id: extract_owner
         run: echo "::set-output name=owner::$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)"
 
+      - name: Add SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.AWS_SSH_KEY }}" > ~/.ssh/aws_key.pem
+          chmod 600 ~/.ssh/aws_key.pem
+
       - name: Deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,4 +58,11 @@ jobs:
           elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
             npm run build
             npx gh-pages -d dist -b staging -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
+
+            echo "Deploying to Staging Server..."
+            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no $STAGING_USER@$STAGING_HOST << 'EOF'
+              cd
+              cd odds-table/test-cicd/
+              git pull
+            EOF
           fi
