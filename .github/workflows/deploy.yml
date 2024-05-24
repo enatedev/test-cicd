@@ -22,14 +22,14 @@ jobs:
         with:
           node-version: '21'
 
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      # - name: Install gh-pages
-      #   run: npm install gh-pages
+      - name: Install gh-pages
+        run: npm install gh-pages
 
-      # - name: Build the project
-      #   run: npm run build
+      - name: Build the project
+        run: npm run build
 
       - name: Configure Git user
         run: |
@@ -59,6 +59,6 @@ jobs:
             npm run build
             npx gh-pages -d dist -b staging -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
             echo "Deploying to Staging Server..."
-            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no $STAGING_USER@$STAGING_HOST "cd ~/odds-table/test-cicd/ && git pull"
+            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no $STAGING_USER@$STAGING_HOST 'cd ~/odds-table/test-cicd/ && git pull'
           fi
           
