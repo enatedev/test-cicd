@@ -64,5 +64,5 @@ jobs:
               cd
               cd odds-table/test-cicd/
               git pull
-            EOF
+              EOF
           fi
