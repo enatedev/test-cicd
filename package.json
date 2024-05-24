@@ -30,7 +30,17 @@
 		"redux-persist": "^6.0.0",
 		"redux-thunk": "^2.4.2",
 		"velocity": "^0.7.3",
-		"velocity-animate": "^1.5.2"
+		"velocity-animate": "^1.5.2",
+		"@mui/system": "^5.15.15",
+		"@preact/preset-vite": "^2.8.2",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@types/react-redux-i18n": "^0.0.16",
+		"javascript-obfuscator": "^4.1.0",
+		"preact": "^10.22.0",
+		"sass": "^1.75.0",
+		"terser": "^5.31.0",
+		"typescript": "^5.4.5",
+		"vite": "^5.2.11"
 	},
 	"devDependencies": {
 		"@mui/system": "^5.15.15",
