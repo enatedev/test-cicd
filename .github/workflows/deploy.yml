@@ -53,9 +53,6 @@ jobs:
             # npm run build
             # npx gh-pages -d dist -b production -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
             echo "Deploying to Staging Server..."
-            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no ec2-user@34.236.192.62 << 'EOF'
-            echo "Connected to the server"
-            touch ex.js
-            EOF      
+            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no ec2-user@34.236.192.62 'echo "Connected to the server" && cd && cd odds-table/test-cicd && touch ny.js'
           fi
           
