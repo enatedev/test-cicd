@@ -58,10 +58,5 @@ jobs:
               touch ex.js
               # git pull
             EOF          
-          elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
-            npm run build
-            npx gh-pages -d dist -b staging -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
-            echo "Deploying to Staging Server..."
-            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no $STAGING_USER@$STAGING_HOST 'cd ~/odds-table/test-cicd/ && git pull'
           fi
           
