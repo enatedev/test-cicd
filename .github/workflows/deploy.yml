@@ -60,7 +60,7 @@ jobs:
             npx gh-pages -d dist -b staging -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
 
             echo "Deploying to Staging Server..."
-            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no $STAGING_USER@$STAGING_HOST << 'EOF'
+            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no $STAGING_USER@$STAGING_HOST << EOF
               cd
               cd odds-table/test-cicd/
               git pull
