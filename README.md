@@ -6,7 +6,7 @@
 
 <h3 align="center">Get started using Preact and Vite!</h3>
 
-## Getting Started
+## Getting Startedd
 
 -   `npm run dev` - Starts a dev server at http://localhost:5173/
 
