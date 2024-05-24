@@ -1,0 +1,13 @@
+@import "../../../variable.scss";
+
+.FlagFixtureContainer {
+  position: absolute;
+  top: 10px;
+  left: -24px;
+  z-index: 1;
+  cursor: pointer;
+
+  img {
+    margin: 0;
+  }
+}

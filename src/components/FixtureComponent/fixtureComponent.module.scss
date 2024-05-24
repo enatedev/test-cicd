@@ -1,0 +1,150 @@
+@import "../../../variable.scss";
+
+.FixtureContainer {
+  width: auto;
+  background-color: $grap-light-color !important;
+
+  .GridContainer {
+    .FixtureGrid {
+      width: 120px;
+      height: 300px;
+      border: 0.5px solid $border-gray-color;
+
+      .FixtureItemGrid {
+        height: 50%;
+        display: flex;
+        justify-content: space-evenly;
+
+        .FixtureOddValueItem {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+          height: 24px;
+          border-radius: 15px;
+          background-color: $white;
+          margin-bottom: 10px;
+          margin-top: 20px;
+          padding: 0px 10px;
+        }
+
+        img {
+          width: 80%;
+        }
+      }
+
+      .AlignItemFlexStart {
+        align-items: flex-start;
+      }
+
+      .AlignItemFlexCenter {
+        align-items: center;
+      }
+
+      .PaddingTop20 {
+        padding-top: 20px;
+      }
+
+      .PaddingTop10 {
+        padding-top: 10px;
+      }
+
+      .FixtureItemBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        padding-bottom: 0;
+
+        img {
+          margin: 0;
+        }
+      }
+
+      .DisplayFlexCenter {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .FixtureItemScore {
+        display: block;
+        border: 0.5px solid $border-gray-color;
+        border-radius: 20px;
+        width: 32px;
+        height: 19px;
+        line-height: 19px;
+        text-align: center;
+        background-color: $white;
+      }
+    }
+
+    .FixtureGridInfo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .Flag {
+    top: 20px;
+    left: -24px;
+    width: 24px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    position: absolute;
+    border-top-left-radius: 120px 70px; /* Adjust radius to match your design */
+    border-bottom-left-radius: 120px 70px; /* Adjust radius to match your design */
+  }
+
+  .RedFlag {
+    background-color: $background-red;
+  }
+
+  .Star {
+    width: 15px; /* Adjust the size of the star */
+    height: 15px; /* Adjust the size of the star */
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    position: absolute;
+    top: 50%; /* Center the star vertically */
+    left: 50%; /* Center the star horizontally */
+    transform: translate(-50%, -50%);
+  }
+
+  .YellowStar {
+    background-color: $yellow-color;
+  }
+
+  .FixtureFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    height: 40px;
+    background-color: $background-button-light;
+
+    .FixtureFooterCenter {
+      width: 225px;
+      height: 30px;
+      background-image: url("https://raw.githubusercontent.com/hptaikhoandev/oddsTableCdn/main/images/other-odds-types-btn-bg.svg");
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

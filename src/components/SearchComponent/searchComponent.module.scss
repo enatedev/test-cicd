@@ -1,0 +1,34 @@
+@import '../../../variable.scss';
+
+.Search {
+  &, div {
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    background-color: $white;
+  }
+
+  div {
+    padding-right: 0 !important;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 100% !important;
+      font-size: 12px;
+      border: none !important;
+    }
+  }
+
+  .SearchIconWrapper {
+    width: 22px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    button {
+      color: $icon-red !important;
+    }
+  }
+}

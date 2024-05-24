@@ -1,0 +1,136 @@
+@import "../../../variable.scss";
+
+.FixtureContainer {
+    width: auto;
+    background-color: $grap-light-color !important;
+    box-shadow: none !important;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    position: relative;
+
+  .GridContainer {
+    .FixtureGrid {
+      width: 120px;
+      height: 300px;
+      border: 0.5px solid $border-gray-color;
+
+      .FixtureItemGrid {
+        height: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 15px;
+
+        .FixtureOddValueItem {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+          height: 24px;
+          border-radius: 15px;
+          background-color: $white;
+          margin-bottom: 10px;
+          margin-top: 20px;
+          padding: 0px 10px;
+
+          img {
+            margin-bottom: 0 !important;
+          }
+        }
+
+        img {
+          width: 80%;
+          cursor: pointer;
+        }
+      }
+
+      .AlignItemFlexStart {
+        align-items: flex-start;
+      }
+
+      .AlignItemFlexCenter {
+        align-items: center;
+      }
+
+      .PaddingTop20 {
+        padding-top: 20px;
+      }
+
+      .PaddingTop10 {
+        padding-top: 10px;
+      }
+    }
+
+    .FixtureGridInfo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .RedFlag {
+    background-color: $background-red;
+  }
+
+  .YellowStar {
+    background-color: $yellow-color;
+  }
+
+  .FixtureFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    height: 40px;
+    background-color: $background-button-light;
+
+    .FixtureFooterCenter {
+      width: 225px;
+      height: 30px;
+      background-image: url("https://raw.githubusercontent.com/hptaikhoandev/oddsTableCdn/main/images/other-odds-types-btn-bg.svg");
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.ClassFlag {
+  width: 24px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -320px;
+  left: -23px;
+}
+
+.ClassStar {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  margin: 0;
+  top: -377px;
+  left: -23px;
+}
+
+.BorderTopLeftRadius {
+  border-top-left-radius: 7px;
+}
+
+.BorderTopRightRadius {
+  border-top-right-radius: 7px;
+}
+
+.BorderBottomLeftRadius {
+  border-bottom-left-radius: 7px;
+}
+
+.BorderBottomRightRadius {
+  border-bottom-right-radius: 7px;
+}

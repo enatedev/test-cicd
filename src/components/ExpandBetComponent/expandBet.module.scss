@@ -1,0 +1,60 @@
+@import "../../../variable.scss";
+
+.Container {
+  background-color: $background-button-light;
+  margin-bottom: 5px;
+  border-radius: 7px;
+
+  .Header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+
+    .HeaderItem {
+      display: flex;
+      align-items: center;
+      border: 1px solid $gray-light-color;
+      border-radius: 20px;
+      height: 30px;
+      padding: 0px 15px;
+      cursor: pointer;
+    }
+  }
+
+  .Body {
+    .BodyItem {
+      padding: 10px 20px;
+
+      .BodyItemCollapse {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .BodyItemCollapseExpand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 33px;
+        flex-wrap: wrap;
+
+        .BoxItemData {
+          .BoxItemValue {
+            margin-bottom: 5px;
+          }
+
+          .BoxItemScore {
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            height: 30px;
+            width: 70px;
+          }
+        }
+      }
+    }
+  }
+}

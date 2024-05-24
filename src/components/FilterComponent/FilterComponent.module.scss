@@ -1,0 +1,11 @@
+@import '../../../variable.scss';
+
+.LeagueSelect {
+  height: 30px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+
+  border: 1px solid $border-gray-color;
+  border-radius: 20px !important;
+  background-color: $white;
+}

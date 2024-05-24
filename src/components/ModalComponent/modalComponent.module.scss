@@ -1,0 +1,24 @@
+
+.ModalWrapper {
+    width: 797px;
+    // min-height: 610px;
+    position: absolute;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.ModalBadge {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('https://cdn.jsdelivr.net/gh/hptaikhoandev/oddsTableCdn@v2.0.2/odds-table-vip/modal-badge.png') no-repeat;
+    width: 225px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

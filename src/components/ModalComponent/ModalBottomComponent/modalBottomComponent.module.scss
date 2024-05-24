@@ -1,0 +1,30 @@
+@import '../../../../variable.scss';
+
+.ModalBottom {
+padding: 20px;
+
+  // div[role='tabpanel'] {
+  //   padding: 0 !important;
+  // }
+}
+
+
+
+.MinHeight {
+  min-height: 40px !important;
+}
+
+.TabList {
+  border-radius: 20px;
+  background-color: $color-dark;
+  overflow: hidden;
+  
+  button {
+    color: $white !important; 
+    text-transform: initial;
+    font-weight: $font-semiBold;
+    font-size: $font-sm;
+    font-family: $font-montserrat;
+    min-height: 40px;
+  }
+}

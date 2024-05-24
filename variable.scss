@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$padding: 16px;
+$border-gray-color: #DADADA;
+$white: #FFFFFF;
+$background-black: #3A3A3A;
+$color-dark: #1C1C1C;
+$background-red: #E01932;
+$background-button-light: #E0E0E0;
+$gray-color: #E0E0E0;
+$light-gray-color: #E5E5E5;
+$dim-gray: #A1A1A1;
+$border-color: #D5D5D5;
+$grap-light-color: #F7F7F7;
+$yellow-color: #FFF500;
+$dark-text: #161616;
+$icon-red: #D62A40;
+$gray-light-color: #B2B2B2;
+
+//FONT SIZE
+$font-sm: 11px;
+$font-md: 13px;
+$font-lg: 16px;
+$font-xlg: 30px;
+
+// FONT WEIGHT
+$font-regular: 400;
+$font-medium: 500;
+$font-semiBold: 600;
+
+//FONT FAMILY
+$font-montserrat: "Montserrat", sans-serif !important;
+
+#app {
+  font-family: $font-montserrat;
+  font-weight: $font-semiBold;
+}
+
+span.MuiTabs-indicator {
+  height: 6px;
+}

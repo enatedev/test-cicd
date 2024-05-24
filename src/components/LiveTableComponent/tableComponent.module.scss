@@ -1,0 +1,110 @@
+@import "../../../variable.scss";
+
+.Container {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  font-family: "Montserrat" !important;
+
+  padding-left: 24px;
+  max-height: 1000px;
+  overflow-y: scroll;
+  .BoxWrapperTable {
+    border-radius: 10px;
+    margin-bottom: 4px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    .HeaderTable {
+      width: 100%;
+      height: 60px;
+
+      .ItemHeaderTable {
+        border: 1px solid $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          margin: 0;
+          height: 21px;
+          width: 32px;
+        }
+      }
+
+      .ItemHeightCollapse {
+        height: 60px;
+      }
+
+      .ItemHeightNotCollapse {
+        height: 30px;
+      }
+
+      .BorderRadiusLeft {
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+      }
+
+      .BorderRadiusRight {
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+      }
+    }
+  }
+
+  .BoxWrapperHeader {
+    background: linear-gradient(
+      135deg,
+      $gray-color 0%,
+      $gray-color 85%,
+      $background-black 50%,
+      $background-black 100%
+    );
+    border-radius: 7px;
+    margin-bottom: 4px;
+
+    .HeaderGrid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 28px;
+      cursor: pointer;
+
+      .HeaderGridItemLeft {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-left: 5px;
+
+        img {
+          margin: 0;
+        }
+      }
+
+      .HeaderGridItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding-right: 40px;
+
+        p {
+          font-size: 11px !important;
+          font-weight: 600 !important;
+          font-family: "Montserrat" !important;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        svg {
+          height: 13px;
+          width: 13px;
+        }
+      }
+    }
+  }
+
+  .Leagues {
+   
+  }
+}

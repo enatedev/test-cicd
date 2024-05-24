@@ -1,0 +1,34 @@
+.OddWrapper {
+	width: 95px;
+	background: #ccc;
+	color: #000;
+	border-radius: 10px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	.Bet {
+		width: 45%;
+	}
+	.Odd {
+		width: 40%;
+	}
+	.Status {
+		width: 15%;
+	}
+}
+
+.NotModalOdds {
+height: 100%;
+}
+
+.GridChild {
+	height: 126px;
+}
+
+.BoxPeriodChild {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}

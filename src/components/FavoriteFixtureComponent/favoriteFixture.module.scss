@@ -1,0 +1,154 @@
+@import "../../../variable.scss";
+
+.FixtureContainer {
+  width: auto;
+  border-radius: 7px;
+  margin-bottom: 4px;
+  box-shadow: none !important;
+
+  .FixtureFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    height: 28px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background: linear-gradient(
+      135deg,
+      $gray-color 0%,
+      $gray-color 85%,
+      $background-black 50%,
+      $background-black 100%
+    );
+
+    .FixtureFooterRight {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      p {
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        font-family: "Montserrat" !important;
+        text-decoration: underline;
+      }
+
+      svg {
+        height: 13px;
+        width: 13px;
+      }
+    }
+
+    .BoxLeague {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      img {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  .FixtureBody {
+    height: 133px;
+    background-color: $grap-light-color;
+    border-radius: 7px;
+
+    .FixtureGridContainer {
+      align-items: center;
+
+      .FixtureGridItem {
+        height: 133px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid $gray-color;
+        border-bottom: 1px solid $gray-color;
+
+        .LiveBoxFixture {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          .LiveButtonBoxFixture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 5px;
+            background-color: red;
+            border-radius: 7px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .BorderRightGrayColor {
+        border-right: 1px solid $gray-color;
+      }
+
+      .DisplayFlexCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .GridItemBoxScore {
+        display: block;
+        border: 0.5px solid $border-gray-color;
+        border-radius: 20px;
+        width: 32px;
+        height: 19px;
+        line-height: 19px;
+        text-align: center;
+        background-color: $white;
+      }
+
+      .BoxTextFlexCenter {
+        text-align: start;
+
+        .TextFlexCenter {
+          padding: 0px 8px;
+        }
+      }
+
+      .BorderBottomLeftRadius {
+        border-bottom-left-radius: 7px;
+      }
+
+      .BorderBottomRightRadius {
+        border-bottom-right-radius: 7px;
+      }
+
+      img {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.ClassFlag {
+  width: 24px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -118px;
+  left: -23px;
+}
+
+.ClassStar {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  margin: 0;
+  top: -177px;
+  left: -23px;
+}

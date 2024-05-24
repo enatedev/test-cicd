@@ -1,0 +1,97 @@
+.BackgroundLoading {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+.LoadingSpinner {
+  margin-top: 40px;
+  display: inline-block
+}
+
+.LoadingSpinner:before {
+  margin: 0 auto;
+  z-index: 999
+}
+
+.LoadingSpinner:before {
+  content: "";
+  margin-top: 40px;
+  display: block;
+  position: relative;
+  width: 5em;
+  height: 5em;
+  background-image: url('https://www.nowgoal5.com/wp-content/plugins/get-api-sport/assets/images/icon-football.png');
+  background-position: center center;
+  background-size: cover;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+  z-index: 1;
+  -webkit-animation: bounce .5s infinite alternate cubic-bezier(.2,.6,.6,1);
+  animation: bounce .5s infinite alternate cubic-bezier(.2,.6,.6,1)
+}
+
+.LoadingSpinner:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 5em;
+  height: 2.5em;
+  background-color: #221c46;
+  border-radius: 50%;
+  opacity: .3;
+  margin: -.4em auto;
+  z-index: 0;
+  -webkit-animation: shadow .5s infinite alternate cubic-bezier(.2,.6,.6,1);
+  animation: shadow .5s infinite alternate cubic-bezier(.2,.6,.6,1)
+}
+}
+
+@-webkit-keyframes bounce {
+  0% {
+      transform: translate3d(0,0,0) scale(1.2,1)
+  }
+
+  100% {
+      transform: translate3d(0,-2rem,0) scale(1,1.2)
+  }
+}
+
+@keyframes bounce {
+  0% {
+      transform: translate3d(0,0,0) scale(1.2,1)
+  }
+
+  100% {
+      transform: translate3d(0,-2rem,0) scale(1,1.2)
+  }
+}
+
+@-webkit-keyframes shadow { 
+  0% {
+      opacity: .2;
+      transform: scale(1);
+      filter: blur(.01em)
+  }
+
+  100% {
+      opacity: .05;
+      transform: scale(1.5);
+      filter: blur(.05em)
+  }
+}
+
+@keyframes shadow {
+  0% {
+      opacity: .2;
+      transform: scale(1);
+      filter: blur(.01em)
+  }
+
+  100% {
+      opacity: .05;
+      transform: scale(1.5);
+      filter: blur(.05em)
+  }
+}

@@ -47,9 +47,9 @@ jobs:
           REPO_OWNER: ${{ steps.extract_owner.outputs.owner }}
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            npm run predeploy:production
-            npx gh-pages -d build -b production-pages -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
+            npm run build
+            npx gh-pages -d build -b production -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
           elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
-            npm run predeploy:staging
-            npx gh-pages -d build -b staging-pages -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
+            npm run build
+            npx gh-pages -d build -b staging -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
           fi

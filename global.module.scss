@@ -1,0 +1,139 @@
+@import "./variable.scss";
+
+.TextLight {
+  color: $white !important;
+}
+
+.TextDark {
+  color: $background-black !important;
+}
+
+.TextRed {
+  color: $background-red !important;
+}
+
+.TextRed {
+  color: $background-red !important;
+}
+
+.BackgroundDark {
+  background-color: $background-black !important;
+}
+
+.BackgroundRed {
+  background-color: $background-red !important;
+}
+
+.BackgroundLight {
+  background-color: $background-button-light !important;
+}
+
+.BackgroundWhite {
+  background-color: $white !important;
+}
+
+.TextCenter {
+  text-align: center !important;
+}
+
+.Gap10 {
+  gap: 10px;
+}
+
+.FontMontserrat {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 600 !important;
+  font-style: normal;
+}
+
+.FontWeight700 {
+  font-weight: 700 !important;
+}
+
+.FontWeight600 {
+  font-weight: 600 !important;
+}
+
+.FontSizeMedium {
+  font-size: $font-md !important;
+}
+
+.FontSizeSmall {
+  font-size: $font-sm !important;
+}
+
+.FontSizeLarge {
+  font-size: 16px !important;
+}
+
+.FontSizeXLarge {
+  font-size: 30px !important;
+}
+
+.Flex {
+  display: flex !important;
+}
+
+.TextBaseDark {
+  font-size: 11px !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600 !important;
+  color: $color-dark !important;
+}
+
+.TextBaseRed {
+  font-size: 11px !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600 !important;
+  color: $background-red !important;
+}
+
+.TextMediumDark {
+  font-size: 13px !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600 !important;
+  color: $color-dark !important;
+}
+
+.TextBaseLight {
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600;
+  color: $white;
+}
+
+.TextMediumLight {  
+  &, & p {
+    font-size: 13px !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 600 !important;
+    color: $white;
+  }
+}
+
+.CursorPointer {
+  cursor: pointer;
+}
+
+.BackgroundTransparent {
+  background-color: transparent !important;
+}
+
+.BackgroundWhite {
+  background-color: $white !important;
+}
+
+.ShadowNone {
+  box-shadow: none !important;
+}
+
+.FlexCenter {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.Margin0 {
+  margin: 0 !important;
+}

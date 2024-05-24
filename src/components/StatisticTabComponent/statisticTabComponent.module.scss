@@ -1,0 +1,13 @@
+@import '../../../variable.scss';
+
+
+.Tab {
+	font-size: $font-sm !important;
+  text-transform: capitalize !important;
+  font-weight: $font-semiBold !important;
+}
+
+.Statistic {
+	height: 450px;
+	overflow-y: scroll;
+}

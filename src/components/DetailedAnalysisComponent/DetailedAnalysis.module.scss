@@ -1,0 +1,18 @@
+@import "../../../variable.scss";
+
+.FixtureFooterLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  img {
+    margin: 0;
+  }
+
+  p {
+    color: $background-red !important;
+    text-decoration: underline;
+    text-transform: none;
+  }
+}

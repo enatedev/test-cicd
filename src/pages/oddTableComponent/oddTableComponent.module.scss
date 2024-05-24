@@ -1,0 +1,18 @@
+@import '../../../variable.scss';
+
+
+.Container {
+    font-size: 11px;
+    font-weight: 600;
+    font-family: "Montserrat" !important;
+    min-height: 80vh;
+
+    .NewClass {
+        background-color: $primary-color;
+        margin-top: 10px;
+    }
+
+    .PaddingRight {
+        padding-right: 35px;
+    }
+}

@@ -1,0 +1,30 @@
+@import '../../../variable.scss';
+
+.Note {
+  width: fit-content;
+  display: inline-flex;
+  font-size: 11px;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: #333;
+
+  img {
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+
+  &:not(:first-child) {
+    margin-left: 39px;
+  }
+
+  &:last-child {
+    margin-left: 55px;
+  }
+}
+
+.NotesWrapper {
+  background-color: #E5E5E5;
+  border-radius: 7px;
+  padding: 0 15px;
+}

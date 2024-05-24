@@ -1,44 +1,47 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "gh-pages": "^6.1.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "homepage": "https://enatedev.github.io/test-cicd",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy:production": "npm run build",
-    "deploy:production": "gh-pages -d build -b production",
-    "predeploy:staging": "npm run build",
-    "deploy:staging": "gh-pages -d build -b staging"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"private": false,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build"
+	},
+	"homepage": "https://enatedev.github.io/hptaikhoandev/oddsTablePreact/",
+	"dependencies": {
+		"@emotion/react": "^11.11.4",
+		"@emotion/styled": "^11.11.5",
+		"@mui/icons-material": "^5.15.15",
+		"@mui/lab": "^5.0.0-alpha.170",
+		"@mui/material": "^5.15.15",
+		"@mui/x-data-grid": "^7.3.2",
+		"@mui/x-date-pickers": "^7.3.1",
+		"@mui/x-date-pickers-pro": "^7.3.1",
+		"@mui/x-tree-view": "^7.4.0",
+		"@reduxjs/toolkit": "^2.2.3",
+		"axios": "^1.5.1",
+		"clsx": "^2.0.0",
+		"dayjs": "^1.11.11",
+		"jquery": "^3.7.1",
+		"moment": "^2.30.1",
+		"moment-timezone": "^0.5.45",
+		"react-helmet-async": "^1.3.0",
+		"react-redux": "^8.1.2",
+		"react-redux-i18n": "^1.9.3",
+		"redux": "^4.2.1",
+		"redux-persist": "^6.0.0",
+		"redux-thunk": "^2.4.2",
+		"velocity": "^0.7.3",
+		"velocity-animate": "^1.5.2"
+	},
+	"devDependencies": {
+		"@mui/system": "^5.15.15",
+		"@preact/preset-vite": "^2.8.2",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@types/react-redux-i18n": "^0.0.16",
+		"javascript-obfuscator": "^4.1.0",
+		"preact": "^10.22.0",
+		"sass": "^1.75.0",
+		"terser": "^5.31.0",
+		"typescript": "^5.4.5",
+		"vite": "^5.2.11"
+	}
 }

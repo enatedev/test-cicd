@@ -1,0 +1,161 @@
+@import "../../../variable.scss";
+
+.PaperHistoryFixture {
+  box-shadow: none !important;
+
+  .BoxHeaderHistoryFixture {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none !important;
+
+    .BoxItemHistoryFixture {
+      display: flex;
+      align-items: center;
+    }
+
+    .Gap20px {
+      gap: 20px;
+    }
+
+    img {
+      margin: 0;
+      height: 56px;
+      width: 98px;
+    }
+
+    .TextLeague {
+      color: $dark-text !important;
+      font-size: 20px !important;
+      line-height: 24px;
+    }
+
+    .PinIcon {
+      color: $icon-red;
+      font-size: 18px;
+    }
+
+    .SharpIcon {
+      font-size: 43px;
+      cursor: pointer;
+    }
+
+    .NumberSeason {
+      width: 42px;
+      height: 19px;
+      border: 1px solid $background-button-light;
+      border-radius: 20px;
+      color: $background-red;
+    }
+  }
+}
+
+.AlignItemCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.AlignItemFlexStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.HistoryBodyFixture {
+  margin-top: 10px !important;
+  color: $dark-text;
+
+  .HistoryBodyFixtureHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: $gray-color;
+    border-radius: 7px;
+    padding: 0px 10px;
+    cursor: pointer;
+  }
+
+  .BoxCollapse {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    background-color: $grap-light-color;
+    margin-top: 5px;
+    border-radius: 7px;
+    height: 65px;
+  }
+
+  .BoxTeamScore {
+    width: 50%;
+
+    div {
+      padding: 0 !important;
+    }
+  }
+
+  .FixtureResult {
+    color: rgb(255, 255, 255);
+    width: 23px;
+    height: 23px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.BoxWrapperHeader {
+  background: linear-gradient(
+    135deg,
+    $gray-color 0%,
+    $gray-color 85%,
+    $background-black 50%,
+    $background-black 100%
+  );
+  border-radius: 7px;
+  margin-bottom: 4px;
+
+  .HeaderGrid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 28px;
+    padding: 0px 60px 0px 30px;
+
+    .HeaderGridItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      p {
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        font-family: "Montserrat" !important;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      svg {
+        height: 13px;
+        width: 13px;
+      }
+    }
+
+    .HeaderCountryLeague {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+
+      img {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

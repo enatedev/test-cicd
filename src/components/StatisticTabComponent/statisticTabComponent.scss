@@ -1,0 +1,69 @@
+@import '../../../variable.scss';
+
+.statistic__element {
+  margin-bottom: 10px;
+}
+
+.statistic__values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.statistic__charts {
+  background: #D9D9D9;
+  width: 100%;
+  height: 9px;
+  display: flex;
+  border-radius: 20px;
+}
+
+.statistic__wrapper {
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    cursor: pointer;
+    .statistic__values {
+      .statistic__title,
+      .home__value,
+      .away__value {
+        font-weight: 900 !important;
+      }
+      
+    }
+  }
+}
+
+.statistic__element .chart {
+  width:  50%;
+}
+
+.statistic__element .home__chart {
+  display: flex;
+  justify-content: end;
+}
+
+.statistic__element .home__chart .bg {
+  background: #D62A40;
+  height: 100%;
+  border-radius: 20px 0 0px 20px;
+}
+
+.statistic__element .away__chart .bg {
+  background: #2FB57D;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+}
+
+// .Mui-selected {
+//   color: $white !important;
+//   background-color: $dim-gray !important;
+//   border-radius: 20px !important;
+//   min-height: unset !important;
+// }
+
+// button {
+//   font-size: $font-sm !important;
+//   text-transform: capitalize !important;
+//   font-weight: $font-semiBold !important;
+// }

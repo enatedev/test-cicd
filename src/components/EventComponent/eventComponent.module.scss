@@ -1,0 +1,35 @@
+@import "../../../variable.scss";
+
+.EventComponent {
+  border: 1px solid $border-color;
+  border-radius: 7px;
+
+  .Event {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .HomeEvent {
+    flex-direction: row;
+  }
+
+  img {
+    margin-bottom: 0 !important;
+  }
+
+  .Title {
+    background-color: $light-gray-color;
+    padding: 10px 15px;
+  }
+
+  .Event {
+    padding: 7px 15px;
+  }
+}
+
+.NoData {
+  background-color: $light-gray-color;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 20px;
+}

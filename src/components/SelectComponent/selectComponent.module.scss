@@ -1,0 +1,29 @@
+@import '../../../variable.scss';
+
+.SelectContainer {
+    border-radius: 20px !important;
+    height: 25px;
+    border: none !important;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.MenuItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BoxItemImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        margin: 0;
+    }
+}

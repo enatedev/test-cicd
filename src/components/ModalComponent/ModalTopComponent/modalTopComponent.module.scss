@@ -1,0 +1,22 @@
+.ModalTop {
+    height: 185px;
+		padding-top: 30px;
+		padding-left: 20px;
+		padding-right: 20px;
+    .Col {
+			text-align: center;
+		}
+}
+
+.TimeStart {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10px;
+}
+
+.Score {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 10px;
+}

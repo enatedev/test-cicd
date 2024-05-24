@@ -1,0 +1,27 @@
+@import "../../../variable.scss";
+
+.FilterContainer {
+  width: 202px;
+  border-radius: 12px;
+  opacity: 0px;
+  padding: 14px 12px;
+  float: right;
+
+  background-color: $grap-light-color;
+
+  .Title {
+    width: 130px;
+    height: 13px;
+
+    font-family: Montserrat;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 13.41px;
+    text-align: left;
+  }
+
+  .TitleRed {
+    width: 30px;
+    color: $background-red;
+  }
+}

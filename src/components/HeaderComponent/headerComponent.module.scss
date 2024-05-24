@@ -1,0 +1,96 @@
+@import "../../../variable.scss";
+
+.HeaderContainer {
+  width: 1500px;
+  margin-bottom: 50px;
+
+  .HeaderBox {
+    width: 100%;
+
+    .HeaderBoxBlack {
+      background-color: $background-black;
+      width: 100%;
+      height: 75px;
+      background: linear-gradient(
+        135deg,
+        #333 0%,
+        #333 78%,
+        #b00 50%,
+        #b00 100%
+      );
+
+      .HeaderOddTableGrid {
+        align-items: center;
+        height: 75px;
+
+        .HeaderOddTableText {
+          font-style: italic;
+          text-transform: uppercase;
+          color: $white;
+          font-size: 25px;
+          font-weight: 700;
+        }
+
+        img {
+          margin-bottom: 0;
+        }
+
+        .SelectOddBet {
+          width: 75px;
+
+          svg {
+            color: $white !important;
+          }
+        }
+
+        .SelectCompanyBet {
+          width: 150px;
+
+          svg {
+            color: black !important;
+          }
+        }
+      }
+
+      .AlignItemEnd {
+        justify-content: flex-end;
+      }
+
+      .AlignItemCenter {
+        justify-content: center;
+      }
+    }
+
+    .SelectLocale {
+      background-color: $white;
+      width: 80px;
+      border-radius: 20px !important;
+      height: 25px;
+      border: none !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        width: unset !important;
+        box-sizing: inherit !important;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+
+.MenuItemSelect {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  img {
+    margin-bottom: 0 !important;
+  }
+}

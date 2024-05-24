@@ -1,0 +1,73 @@
+@import "../../../variable.scss";
+
+.DatePickerField {
+  width: 200px;
+  border-radius: 20px !important;
+
+  .MuiInputBase-sizeSmall {
+    width: 200px;
+  }
+}
+
+.DatePickerBox {
+  position: relative;
+  margin-top: 21px;
+  margin-bottom: 3px;
+
+  .DatePickerLeftButton {
+    position: absolute;
+    left: 0px;
+    line-height: 0.5rem;
+    color: $white;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .DatePickerRightButton {
+    position: absolute;
+    right: 0px;
+    line-height: 0.5rem;
+    color: $white;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .SelectBoxDate {
+    width: 150px;
+    height: 25px;
+    border-radius: 20px;
+    color: $white;
+
+    svg {
+      display: none;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px !important;
+
+      p {
+        color: $white !important;
+      }
+    }
+
+    fieldset {
+      border: 1px solid $white;
+      border-color: $white !important;
+      border-width: 1px !important;
+    }
+  }
+}
+
+.MenuItem {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.Spinner {
+  height: 20px !important;
+  width: 20px !important;
+}
