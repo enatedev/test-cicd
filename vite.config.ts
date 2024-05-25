@@ -5,18 +5,18 @@ import { exec } from 'child_process';
 export default defineConfig({
   plugins: [
     preact(),
-    {
-      name: 'obfuscate-js',
-      writeBundle() {
-        exec('node obfuscate.js', (err, stdout, stderr) => {
-          if (err) {
-            console.error(`Error: ${stderr}`);
-            throw err;
-          }
-          console.log(stdout);
-        });
-      },
-    },
+    // {
+    //   name: 'obfuscate-js',
+    //   writeBundle() {
+    //     exec('node obfuscate.js', (err, stdout, stderr) => {
+    //       if (err) {
+    //         console.error(`Error: ${stderr}`);
+    //         throw err;
+    //       }
+    //       console.log(stdout);
+    //     });
+    //   },
+    // },
   ],
 
   define: {
@@ -28,7 +28,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        entryFileNames: 'assets/index.js',
+        entryFileNames: 'assets/index.min.js',
         assetFileNames: (assetInfo) => {
           if (assetInfo.name.endsWith('.css')) {
             return 'assets/index.css';
