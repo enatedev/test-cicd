@@ -12,7 +12,7 @@ export function App() {
     <HelmetProvider>
       <PersistGate persistor={persistor}>
         <Provider store={store}>
-          <>test</>
+          <>5679 nerver die~!!!</>
           <OddTableComponent />
         </Provider>
       </PersistGate>
