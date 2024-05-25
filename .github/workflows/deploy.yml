@@ -53,7 +53,7 @@ jobs:
             npm run build
             npx gh-pages -d dist -b production -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
             echo "Deploying to Production..."
-            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no ec2-user@34.236.192.62 'echo "Connected to the server" && cd ~/odds-table/test-cicd && git pull && cd && rm -f index.min.js index.css && cp -r odds-table/test-cicd/assets/ assets && sudo pm2 restart server'      
+            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no ec2-user@34.236.192.62 'echo "Connected to the server" && cd ~/odds-table/test-cicd && git pull && cd && rm -r assets && cp -r odds-table/test-cicd/assets/ assets && sudo pm2 restart server'      
             elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
             npm run build
             npx gh-pages -d dist -b staging -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
