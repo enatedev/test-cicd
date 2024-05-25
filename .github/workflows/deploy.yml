@@ -22,11 +22,11 @@ jobs:
         with:
           node-version: '21'
 
-      - name: Install dependencies
-        run: npm install
+      # - name: Install dependencies
+      #   run: npm install
 
-      - name: Install gh-pages
-        run: npm install gh-pages
+      # - name: Install gh-pages
+      #   run: npm install gh-pages
 
       - name: Configure Git user
         run: |
@@ -50,11 +50,12 @@ jobs:
           REPO_OWNER: ${{ steps.extract_owner.outputs.owner }}
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            npm run build
-            npx gh-pages -d dist -b production -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
+            # npm run build
+            # npx gh-pages -d dist -b production -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
             echo "Deploying to Production..."
-            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no ec2-user@34.236.192.62 'echo "Connected to the server" && cd && cd ~/odds-table/test-cicd && git pull'      
-          elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
+            # ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no ec2-user@34.236.192.62 'echo "Connected to the server" && cd && cd ~/odds-table/test-cicd && git pull'      
+            ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no ec2-user@34.236.192.62 'echo "Connected to the server" && cd ~/odds-table/test-cicd && git pull && sudo pm2 restart server'      
+            elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
             npm run build
             npx gh-pages -d dist -b staging -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${REPO_OWNER}/${GITHUB_REPOSITORY##*/}.git
             echo "Deploying to Staging Server..."
