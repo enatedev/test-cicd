@@ -19,7 +19,7 @@ import { join } from 'path';
     }).getObfuscatedCode();
 
     // Write the obfuscated code to a new file
-    writeFileSync(outputFilePath, code);
+    writeFileSync(outputFilePath, obfuscatedCode);
 
     console.log(`Obfuscated file written to ${outputFilePath}`);
   } catch (error) {
